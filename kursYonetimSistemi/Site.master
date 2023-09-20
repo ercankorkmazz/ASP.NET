@@ -1,0 +1,58 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+    </head>
+<body style="background:#87CAD0;">
+    <form runat="server">
+    <div class="page">
+        <div class="header">
+            <div class="title">
+                <div class="logo"></div>
+            </div>
+            <div class="loginDisplay" valign="middle">
+            
+                <asp:Button ID="kullaniciAyarlariBTN" runat="server" CssClass="button" 
+                    style="margin-top:30px;" Text="Kullanıcı Ayarları" onclick="kullaniciAyarlariBTN_Click" 
+                    />
+            
+                <asp:Button ID="oturumuKapatBTN" runat="server" CssClass="button" 
+                    style="margin-top:30px;" Text="Oturumu Kapat" onclick="oturumuKapatBTN_Click" 
+                    />
+            
+            </div>
+            <div class="clear hideSkiplink">
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" 
+                    EnableViewState="False" IncludeStyleBlock="False" Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Kurs İşlemleri" 
+                            Value="kursIslem"/>
+                        <asp:MenuItem NavigateUrl="~/inc/ogrKayit.aspx" Text="Öğrenci Kaydı" 
+                            Value="ogrKayit"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/inc/ogretmenKayit.aspx" Text="Öğretmen Kaydı" 
+                            Value="ogretmenler"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/inc/dersProgrami.aspx" Text="Ders Programı" 
+                            Value="DersProgrami"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/inc/sorgula.aspx" Text="Sorgula" 
+                            Value="ogrSorgula"/>
+                    </Items>
+                </asp:Menu>
+            </div>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+        
+    </div>
+    </form>
+</body>
+</html>
