@@ -1,0 +1,145 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Yonetim.master.cs" Inherits="Yonetim_Yonetim" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="iso-8859-9">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Dashboard">
+    <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+
+    <title>Yönetim Paneli</title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="js/fancybox/jquery.fancybox.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/style-responsive.css" rel="stylesheet" />
+    <script src="js/jquery-2.0.3.min.js" type="text/javascript"></script>
+    <script src="js/notifIt.js" type="text/javascript"></script>
+    <link href="css/notifIt.css" type="text/css" rel="stylesheet"/>
+    <script src="../ckeditor/ckeditor.js" type="text/javascript"></script>
+    <script src="js/jquery.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+      <asp:Literal runat="server" ID="mesajTXT" />
+      <section id="container" >
+	    <header class="header black-bg">
+      	    <div class="sidebar-toggle-box">
+        	    <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+            </div>
+            <a href="index.html" class="logo"><b>Yönetim Paneli</b></a>
+            
+            <div class="top-menu">
+        	    <ul class="nav pull-right top-menu">
+            	    <li><asp:Button ID="kapatBTN" class="logout" runat="server" Text="Oturumu Kapat" OnClick="kapatBTN_Click" /></li>
+                </ul>
+            </div>
+	    </header>
+            <aside>
+              <div id="sidebar"  class="nav-collapse">
+                  <ul class="sidebar-menu" id="nav-accordion">
+              
+              	      <p class="centered"><a href="~/Yonetim/inc/Ayarlar.aspx" runat="server"><img src="~/Yonetim/img/ui-sam.jpg" class="img-circle" width="60" runat="server"></a></p>
+              	      <h5 class="centered">
+                            <asp:Label ID="adSoyadLabelTXT" runat="server" Text="Label"></asp:Label>
+              	      </h5>
+              	  	
+                      <li class="mt">
+                          <a id="A1" href="~/Yonetim/Default.aspx" runat="server">
+                              <i class="fa fa-dashboard"></i>
+                              <span>Anasayfa</span>
+                          </a>
+                      </li>
+                      <li class="mt" style="margin-top:0;">
+                          <a href="~/Default.aspx" target="_blank" runat="server">
+                              <i class="fa fa-desktop"></i>
+                              <span>Siteyi Görüntüle</span>
+                          </a>
+                      </li>
+                      <li class="mt" style="margin-top:0;">
+                          <a href="~/Yonetim/inc/Slider.aspx" target="_self" runat="server">
+                              <i class="fa fa-th"></i>
+                              <span>Slider</span>
+                          </a>
+                      </li>
+                      <li class="mt" style="margin-top:0;">
+                          <a href="~/Yonetim/inc/Kategoriler.aspx" target="_self" runat="server">
+                              <i class="fa fa-tasks"></i>
+                              <span>Kayegoriler</span>
+                          </a>
+                      </li>
+                      <li class="sub-menu">
+                          <a href="~/Yonetim/inc/Projeler.aspx" target="_self" runat="server">
+                              <i class="fa fa-book"></i>
+                              <span>Projeler</span>
+                          </a>
+                      </li>
+                      <li class="sub-menu">
+                          <a href="javascript:;" >
+                              <i class="fa fa-cogs"></i>
+                              <span>Ayarlar</span>
+                          </a>
+                          <ul class="sub">
+                              <li><asp:Button ID="ayarlarBTN" CssClass="linkBTN" runat="server" Text="Kullanıcı Ayarları" OnClick="ayarlarBTN_Click" /></li>
+                              <li><asp:Button ID="siteAyarlariBTN" CssClass="linkBTN" runat="server" Text="Site Ayarları" OnClick="siteAyarlariBTN_Click" /></li>
+                              <li><asp:Button ID="kilitleBTN" CssClass="linkBTN" runat="server" Text="Kilitle" OnClick="kilitleBTN_Click" /></li>
+                              <li><asp:Button ID="oturumuKapatBTN" CssClass="linkBTN" runat="server" Text="Oturumu Kapat" OnClick="oturumuKapatBTN_Click" /></li>
+                          </ul>
+                      </li>
+                  </ul>
+              </div>
+          </aside>
+          <!--İÇERİK ALANI-->
+          <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+          </asp:ContentPlaceHolder>
+          <!--İÇERİK ALANI-->
+          <footer class="site-footer">
+              <div class="text-center">
+                   &copy; 2016 Tüm hakları saklıdır. | <a href="mailto:ercan.korkmazz@gmail.com"> Ercan KORKMAZ</a>
+                  <a href="#" class="go-top">
+                      <i class="fa fa-angle-up"></i>
+                  </a>
+              </div>
+          </footer>
+      </section>
+      <script src="js/jquery.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script class="include" type="text/javascript" src="js/jquery.dcjqaccordion.2.7.js"></script>
+      <script src="js/jquery.scrollTo.min.js"></script>
+      <script src="js/jquery.nicescroll.js" type="text/javascript"></script>
+      <script src="js/common-scripts.js"></script>
+      <script src="js/jquery-ui-1.9.2.custom.min.js"></script>
+	  <script src="js/bootstrap-switch.js"></script>
+      <script src="js/jquery.ui.touch-punch.min.js"></script>
+      <script src="js/fancybox/jquery.fancybox.js"></script> 
+
+      <script type="text/javascript">
+          $(function () {
+              //    fancybox
+              jQuery(".fancybox").fancybox();
+          });
+
+      </script>
+      <script>
+
+          $(function () {
+              $('select.styled').customSelect();
+          });
+
+      </script>
+        
+    </form>
+</body>
+</html>
