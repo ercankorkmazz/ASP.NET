@@ -1,0 +1,46 @@
+
+#basic-modal-content {display:none;}
+
+/* Overlay */
+#simplemodal-overlay {background-color:#010101; cursor: default; z-index: 9998 !important;}
+
+/* Container */
+#simplemodal-container { width:600px; height:413px; color:#333; background-color:#fff; border:1px solid #ccc; font-family:Arial; font-size:12px;z-index: 9999 !important;}
+#simplemodal-container .simplemodal-data {}
+#simplemodal-container code {background:#141414; border-left:3px solid #65B43D; color:#bbb; display:block; font-size:12px; margin-bottom:12px; padding:4px 6px 6px;}
+#simplemodal-container a.modalCloseImg {background:url(../js/x.png) no-repeat; width:25px; height:29px; display:inline; z-index:3200; position:absolute; top:-15px; right:-16px; cursor:pointer;}
+#simplemodal-container h3 {color:#84b8d9;}
+
+#simplemodal-container {
+	border: 1px solid #ccc; 
+	border: 1px solid #ccc;
+	-moz-border-radius: 3px; border-radius: 3px;
+} 
+.gg-fb {
+	position: relative;
+	padding:10px;
+}
+.gg-fb a{
+    text-decoration:none; 
+    text-align:right; 
+    padding-top:8px;
+    font-size:17px;
+    font-weight:bold;
+    color: #141414;
+    clear:both;
+    float:right;
+    text-shadow: 0px 0px 7px #555;
+}
+.gg-fb a:focus, a:hover{
+    color: #A31919;
+}
+.fancybox_baslik{
+	margin:0px;
+	float: left;
+	color: #000;
+    font-size:19px;
+    text-shadow: 0px 0px 5px #bbb;
+}
+.fancybox_kapat{
+	float:right;
+}
