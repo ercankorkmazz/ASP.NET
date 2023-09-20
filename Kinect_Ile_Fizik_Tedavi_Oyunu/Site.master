@@ -1,0 +1,129 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="Site" %>
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Kinect ile Fizik Tedavi Oyunu</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="~/css/font1.css">
+	<link rel="stylesheet" href="~/css/animate.css">
+	<link rel="stylesheet" href="~/css/icomoon.css">
+	<link rel="stylesheet" href="~/css/simple-line-icons.css">
+	<link rel="stylesheet" href="~/css/magnific-popup.css">
+	<link rel="stylesheet" href="~/css/bootstrap.css">
+	<link rel="stylesheet" href="~/css/style.css">
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+    
+    <script src="~/js/jquery-2.0.3.min.js" type="text/javascript"></script>
+    <script src="~/js/notifIt.js" type="text/javascript"></script>
+    <script src="../../js/jquery-2.0.3.min.js" type="text/javascript"></script>
+    <script src="../../js/notifIt.js" type="text/javascript"></script>
+    <link href="~/css/notifIt.css" type="text/css" rel="stylesheet">
+
+	<meta charset="iso-8859-9">
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:Literal runat="server" ID="mesajTXT" />
+        <header role="banner" id="fh5co-header">
+		    <div class="container">
+			    <!-- <div class="row"> -->
+			        <nav class="navbar navbar-default">
+		            <div class="navbar-header">
+		                <span class="navbar-brand">Kinect ile Fizik Tedavi Oyunu</span> 
+		            </div>
+		            <div id="yonetimMenu" runat="server" class="menu">
+                        <asp:Button ID="oturumuKapatBTN" runat="server" CssClass="menuLi"
+                            Text="Oturumu Kapat" class="btn btn-danger" UseSubmitBehavior="False" OnClick="oturumuKapatBTN_Click"/>    
+                        <asp:Button ID="KullaniciKayitlariBTN" CssClass="menuLi" runat="server" Text="Kullanıcı Kayıtları" OnClick="KullaniciKayitlariBTN_Click" /> 
+                        <asp:Button ID="HastaKayitlariBtn" CssClass="menuLi" runat="server" Text="Hasta Kayıtları"  OnClick="HastaKayitlaribtn_Click" />          
+                        <asp:Button ID="AnasayfaBtn" CssClass="menuLi" runat="server" Text="Anasayfa" OnClick="Anasayfabtn_Click" />            
+		            </div>
+                    <div id="hastaMenu" runat="server" class="menu">
+                        <asp:Button ID="HastaOturumKapatBTN" runat="server" CssClass="menuLi"
+                            Text="Oturumu Kapat" class="btn btn-danger" UseSubmitBehavior="False" OnClick="HastaOturumKapatBTN_Click"/>    
+                        <asp:Button ID="HastaKullaniciIslemleriBTN" CssClass="menuLi" runat="server" Text="Kullanıcı İşlemleri" OnClick="HastaKullaniciIslemleriBTN_Click"/> 
+                        <asp:Button ID="HastaSkorlarBTN" CssClass="menuLi" runat="server" Text="Skorlar" OnClick="HastaSkorlarBTN_Click"/>          
+                        <asp:Button ID="HastaAnasayfaBTN" CssClass="menuLi" runat="server" Text="Anasayfa" OnClick="HastaAnasayfaBTN_Click" />            
+		            </div>
+			        </nav>
+			    <!-- </div> -->
+		    </div>
+	    </header>
+	    <section id="fh5co-home" data-section="home" style="height:180px; background-image: url(images/full_image_2.jpg);" data-stellar-background-ratio="0.5">
+		    <div class="gradient"></div>
+		    <div class="slant" data-section="giris"></div>
+	    </section>
+
+	    <section id="fh5co-about" data-section="ekip" style="padding-top:0;">
+		    <div class="container">
+			    <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+		    </div>
+	    </section>
+        <!--Proje Ekibi Bitimi-->
+	    <footer id="footer" role="contentinfo">
+		    <a href="#" class="gotop js-gotop"><i class="icon-arrow-up2"></i></a>
+            <div class="clear">&nbsp;</div>
+            <div style="width:100%; max-width:950px; margin:auto; font-size:17px; text-align:center;">
+        	    1139B421700278 nolu yazılım projesi, <strong>TUBİTAK 2242 - Üniversite Öğrencileri Yazılım Projeleri Yarışması</strong> tarafından desteklenmektir.<br>
+                2017 © Tüm hakları Kırıkkale Üniversitesi Bilgisayar ve Öğretim Teknolojileri Eğitimi Bölümüne aittir.
+
+            </div>
+	    </footer>
+	    <!-- jQuery -->
+        
+	    <script src="~/js/jquery.min.js"></script>
+	    <script src="~/js/jquery.easing.1.3.js"></script>
+	    <script src="~/js/bootstrap.min.js"></script>
+	    <script src="~/js/jquery.waypoints.min.js"></script>
+	    <script src="~/js/jquery.stellar.min.js"></script>
+	    <script src="~/js/jquery.countTo.js"></script>
+	    <script src="~/js/jquery.magnific-popup.min.js"></script>
+	    <script src="~/js/magnific-popup-options.js"></script>
+
+	    <script src="../../js/jquery.min.js"></script>
+	    <script src="../../js/jquery.easing.1.3.js"></script>
+	    <script src="../../js/bootstrap.min.js"></script>
+	    <script src="../../js/jquery.waypoints.min.js"></script>
+	    <script src="../../js/jquery.stellar.min.js"></script>
+	    <script src="../../js/jquery.countTo.js"></script>
+	    <script src="../../js/jquery.magnific-popup.min.js"></script>
+	    <script src="../../js/magnific-popup-options.js"></script>
+
+	    <script src="~/js/jquery.style.switcher.js"></script>
+	    <script src="../../js/jquery.style.switcher.js"></script>
+	    <script>
+		    $(function(){
+			    $('#colour-variations ul').styleSwitcher({
+				    defaultThemeId: 'theme-switch',
+				    hasPreview: false,
+				    cookie: {
+		          	    expires: 30,
+		          	    isManagingLoad: true
+		      	    }
+			    });	
+			    $('.option-toggle').click(function() {
+				    $('#colour-variations').toggleClass('sleep');
+			    });
+		    });
+	    </script>
+	    <script src="~/js/main.js"></script>
+	    <script src="../../js/main.js"></script>
+    </form>
+</body>
+</html>
