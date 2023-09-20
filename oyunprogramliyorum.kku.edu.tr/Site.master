@@ -1,0 +1,122 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="Site" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    
+    <meta charset="iso-8859-9">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/icon" href="img/logo.png"/>
+    <link rel="stylesheet" type="text/css" href="css/slider.css" />
+	<script type="text/javascript" src="js/modernizr.custom.28468.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link id="switcher" href="css/themes/default-theme.css" rel="stylesheet">
+    <script src="js/jquery-2.0.3.min.js" type="text/javascript"></script>
+    <script src="js/notifIt.js" type="text/javascript"></script>
+    <link href="css/notifIt.css" type="text/css" rel="stylesheet"/>
+    <!-- Photo Swipe Image Gallery -->     
+    <link rel='stylesheet prefetch' href='css/photoswipe.css'>
+    <link rel='stylesheet prefetch' href='css/default-skin.css'>
+    <link href="css/style.css" rel="stylesheet">
+   
+    <!-- Google fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>  
+    <link href='http://fonts.googleapis.com/css?family=Habibi' rel='stylesheet' type='text/css'>   
+    <link href='http://fonts.googleapis.com/css?family=Cinzel+Decorative:900' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+    body,td,th {
+		font-family: Habibi, serif;
+	}
+    </style>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+      <asp:Literal runat="server" ID="mesajTXT" />
+        <a class="scrollToTop" href="#">
+    	    <img src="~/img/yukari.png" runat="server">
+        </a>
+          <header id="header">
+              <div class="menu_area">
+                <nav class="navbar navbar-default navbar-fixed-top" role="navigation">  
+                  <div class="container">
+                    <div class="navbar-header" style="max-width:600px;">
+                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </button>
+                      <div class="navbar-brand"><asp:Label id="baslikTXT" runat="server" Text=""></asp:Label></div>                             
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                      <ul id="top-menu" class="nav navbar-nav navbar-right main-nav">
+                        <li><a href="~/Default.aspx" runat="server">ANASAYFA</a></li>
+                        <li><a href="~/ProjeEkibi.aspx" runat="server">PROJE EKİBİ</a></li>
+                        <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">ETKİNLİK<span class="fa fa-angle-down"></span></a>
+                          <ul class="dropdown-menu" role="menu">
+                            <li><a id="A1" href="~/inc/EtkinlikHakkinda.aspx" runat="server">ETKİNLİK HAKKINDA</a></li>
+                            <li><a href="~/inc/EtkinlikProgrami.aspx" runat="server">ETKİNLİK PROGRAMI</a></li>
+                          </ul>
+                        </li>
+                        <li><a href="~/Galeri.aspx" runat="server">GALERİ</a></li>
+                        <li><a href="~/Iletisim.aspx" runat="server">İLETİŞİM</a></li>
+                      </ul>           
+                    </div>
+                  </div>     
+                </nav>  
+              </div>   
+          </header>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        <footer id="footer">
+          <div class="footer-bottom">
+            <div class="container">
+              <div class="row">
+          	
+                <a href="http://kku.edu.tr/" target="_blank"><img src="~/img/KKU_logo.png" runat="server"></a>
+            
+                <a href="http://www.tubitak.gov.tr/" target="_blank" style="margin-left:30px;"><img src="~/img/TUBITAK_logo.png" runat="server"></a>
+            
+                <div class="col-md-12" style="padding-top:20px;">
+                  <p>Bu etkinlik, 116B376 nolu proje ile TÜBİTAK BİLİM VE TOPLUM PROGRAMLARI tarafından desteklenmektir.</p>
+                  <p>2016 &copy; T&uuml;m hakları Kırıkkale &Uuml;niversitesi Bilgisayar ve &Ouml;ğretim Teknolojileri Eğitimi B&ouml;l&uuml;m&uuml;ne aittir.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+        <!--=========== End Footer SECTION ================-->
+
+
+
+        <!-- jQuery Library  -->
+        <script src="js/jquery.js"></script>    
+        <!-- Bootstrap default js -->
+        <script src="js/bootstrap.min.js"></script>
+        <!-- Photo Swipe Gallery Slider -->
+        <script src='js/photoswipe.min.js'></script>
+        <script src='js/photoswipe-ui-default.min.js'></script>    
+        <script src="js/photoswipe-gallery.js"></script>
+
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.cslider.js"></script>
+		<script type="text/javascript">
+		    $(function () {
+
+		        $('#da-slider').cslider({
+		            autoplay: true,
+		            bgincrement: 450
+		        });
+
+		    });
+		</script>	
+    </form>
+</body>
+</html>
